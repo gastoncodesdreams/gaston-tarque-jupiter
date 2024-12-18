@@ -1,0 +1,74 @@
+
+/*NAME HEADER*/
+#name-header {
+    font-family: "Doto", cursive;
+    font-size: 3.5rem;
+    padding-top: 0.5;
+    background-color: green;
+    text-align: center;
+    border-radius: 40%;
+}
+
+/*PORTRAIT*/
+.image-container {
+    text-align: center;
+}
+img{width: 30%}
+
+/*BODY*/
+body {
+    background-color: rgb(172,185,100);
+    font-family: "Roboto", cursive;
+}
+
+/*ABOUT SECTION*/
+#about{
+    text-align: center;
+    background-color: rgb(95,167, 80);
+    padding: 5px; 
+    border-radius: 8px;
+    margin-bottom: 1rem;}
+
+/*EXPERIENCE SECTION*/
+#experience {
+    background-color: rgb(95,167, 80);
+    padding: 20px; 
+    border-radius: 8px; 
+}
+
+#experience h2 {
+    font-family: "Roboto", cursive;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 1rem; 
+}
+
+#experience ul {
+    list-style-type: none; /* take away bullets */
+    padding: 0; 
+}
+/*For each block under ul and li*/
+#experience ul li {
+    background-color: rgb(95,167, 80); /*background color*/
+    padding: 8px; /*padding*/
+    margin-bottom: 10px; /*space between each block*/
+    border-radius: 8px; /*round corners*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /*shadow*/
+    font-size: 1rem; 
+    color: black; 
+}
+
+/*CONNECT SECTION*/
+#connect {
+    text-align: center;
+    background-color: rgb(95,167, 80); 
+    padding:0px; 
+    border-radius: 100px; 
+    color: #134413;
+}
+
+#connect ul {
+    list-style-type: none; /* take away bullets */
+    padding: 0; 
+}
