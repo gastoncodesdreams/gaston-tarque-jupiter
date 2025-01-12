@@ -17,8 +17,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    display: inline; /*horizontal display*/
+    margin: 0 20px;   
 }
 
 nav ul li a {
@@ -36,7 +36,7 @@ nav ul li a:hover {
 #name-header {
     font-family: "Doto", cursive;
     font-size: 3.5rem;
-    padding-top: 0.5;
+    padding-top: 0.5rem;
     background-color: green;
     text-align: center;
     border-radius: 40%;
@@ -67,10 +67,12 @@ body {
     background-color: rgb(95,167, 80);
     padding: 20px; 
     border-radius: 8px; 
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: grid;
+    gap: 20px; /*space between grid parts */
+    grid-template-columns: 1fr; /*column layout for header */
+    grid-template-rows: auto 1fr; /* header and content rows*/
 }
+
 
 #experience h2 {
     font-family: "Roboto", cursive;
@@ -78,44 +80,44 @@ body {
     color: black;
     text-align: center;
     margin-bottom: 1rem; 
+    grid-row: 1; /*header 1st row*/
 }
 
 #experience ul {
     list-style-type: none; /*take away bullets*/
     padding: 0; 
+    grid-row: 2; /*job entries 2nd row*/
 }
 
 /*For each block under ul and li*/
 #experience ul li {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: rgb(95,167, 80); /*background color*/
-    padding: 8px; /*padding*/
-    margin-bottom: 10px; /*space between each block*/
-    border-radius: 8px; /*round corners*/
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /*shadow*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr; /*3 columns w 3 widths*/
+    gap: 10px; /* Adds space between columns */
+    background-color: rgb(95,167, 80); /* background color */
+    padding: 8px; /* padding */
+    margin-bottom: 10px; /* space between each block */
+    border-radius: 8px; /* round corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* shadow */
     font-size: 1rem; 
     color: black; 
 }
-
 /*JOB TITLE*/
 #experience ul li .job-title {
-    flex: 1;
     font-weight: bold;
+    grid-column: 1; /*1st column*/
 }
 
 /*JOB DATES*/
 #experience ul li .job-dates {
     text-align: left; 
     margin-left: 10px; 
+    grid-column: 2; /*2nd column*/
 }
 
 /*JOB DESCRIPTION*/
 #experience ul li .job-description {
-    flex-basis: 100%; /*width*/
-    margin-left: 20px;
+    grid-column: 3; /*3rd column*/
 }
 
 /*SKILLS SECTION*/
@@ -193,4 +195,138 @@ body {
     width: 100%; /*image takes up entire container*/
     height: 100%; 
     object-fit: contain; /*this is a non-distortion measure*/
+}
+
+
+/*&&&&&&&&&&&& MEDIA QUERIES &&&&&&&&&&&*/
+
+/*TABLETS*/
+@media (min-width: 768px) {
+   
+/*nav adjust*/
+    nav ul li{
+        display: inline-block; 
+        margin: 0 30px;
+    }
+    
+    /*anchor tags*/
+    nav ul li a{
+        font-size: 20px;
+    }
+
+/*name adjust*/
+    #name-header{
+    font-size: 5rem; 
+    }
+
+/*portrait adjust*/
+    .image-container img{
+    width: 25%;
+    }
+
+/*about section*/
+    #about{
+        background-color: rgb(120, 180, 80);
+        padding: 10px;
+    }
+
+/*experience section*/
+    #experience ul li {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr; /*keep tablets grid*/
+        gap: 15px; 
+    }
+
+/*skills, projects, connect sections*/
+    #skills{
+        padding: 15px;
+        color: darkgreen;
+    }
+
+    #skills h2{
+        font-size: 3rem;
+    }
+    
+    #projects{
+        padding: 15px;  /*padding addition*/
+        }
+    
+    #connect{
+    padding: 15px;  /*padding addition*/
+    }
+
+    #connect ul {
+    justify-content: space-around; /*icon spread*/
+    }
+
+    #connect ul li{
+    width: 50px;   /*increase connect imgs*/
+    height: 50px;
+    }
+}
+
+/*LARGER DEVICES*/
+@media (min-width: 1200px){
+
+/*nav adjust*/
+    nav ul li{
+        margin: 0 40px;
+    }
+
+    /*anchor tags*/
+    nav ul li a{
+        font-size: 23px;
+    }
+
+    body{
+        margin: 0 auto; /*center*/
+        max-width: 1200px; /*non-stretch*/
+        }
+
+/*name adjust*/
+    #name-header{
+        font-size: 6rem;
+    }
+
+/*portrait adjust*/
+    .image-container img{
+        width: 15%;
+    }
+
+/*experience section*/
+    #experience ul li {
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr; 
+        gap: 15px;
+        padding: 15px;
+
+    }
+
+    #experience ul li .job-description{
+        margin-left: 20px; /*additional margin*/
+    }
+
+/*skills, projects, connect sections*/
+    #skills {
+        padding: 30px;  /*padding addition*/
+        }
+    
+    #projects{
+        background-color: rgb(50, 74, 35);
+        padding: 30px;
+    }
+
+    #connect {
+        padding: 30px;
+        flex-direction: row; /*column layout*/
+    }
+
+    #connect ul {
+    justify-content: space-evenly; /*even spaces*/
+    }
+
+    #connect ul li{
+    width: 60px;   /*increase connect imgs*/
+    height: 60px;
+    }
 }
