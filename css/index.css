@@ -137,6 +137,27 @@ body {
     margin-bottom: 1rem; 
 }
 
+#skills ul {
+    list-style-type: none;  /*no bullet points*/
+    padding-left: 0;        /*no left padding*/
+/***********/
+    display: grid;          
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /*autofill columns*/
+    gap: 10px;              
+    justify-items: center; 
+}
+
+#skills ul li {
+    background-color: #57865f; 
+    padding: 10px;               
+    border-radius: 5px;          
+    font-size: 1.1rem;           
+    text-align: center;         
+}/**********************/
+
+
+
+
 /*PROJECTS SECTION*/
 #projects {
     text-align: center; 
@@ -231,6 +252,10 @@ body {
     }
 
 /*experience section*/
+    #experience {
+    margin-bottom: 30px;  
+    }
+
     #experience ul li {
         display: grid;
         grid-template-columns: 1fr 1fr 2fr; /*keep tablets grid*/
@@ -240,13 +265,18 @@ body {
 /*skills, projects, connect sections*/
     #skills{
         padding: 15px;
-        color: darkgreen;
+        color: black;
     }
 
     #skills h2{
         font-size: 3rem;
     }
     
+
+    #skills ul {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* increase min width of grid*/
+    }
+
     #projects{
         padding: 15px;  /*padding addition*/
         }
@@ -294,6 +324,9 @@ body {
     }
 
 /*experience section*/
+    #experience {
+    margin-bottom: 30px;  
+    }
     #experience ul li {
         display: grid;
         grid-template-columns: 1fr 1fr 2fr; 
@@ -310,6 +343,10 @@ body {
     #skills {
         padding: 30px;  /*padding addition*/
         }
+
+    #skills ul {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /*increase min width for grid*/
+     }
     
     #projects{
         background-color: rgb(50, 74, 35);
