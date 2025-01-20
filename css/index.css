@@ -137,6 +137,26 @@ body {
     margin-bottom: 1rem; 
 }
 
+<<<<<<< Updated upstream
+=======
+#skills ul {
+    list-style-type: none;  /*no bullet points*/
+    padding-left: 0;        /*no left padding*/
+    display: grid;          
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /*autofill columns*/
+    gap: 10px;              
+    justify-items: center; 
+}
+
+#skills ul li {
+    background-color: #57865f; 
+    padding: 10px;               
+    border-radius: 5px;          
+    font-size: 1.1rem;           
+    text-align: center;         
+}
+
+>>>>>>> Stashed changes
 /*PROJECTS SECTION*/
 #projects {
     text-align: center; 
