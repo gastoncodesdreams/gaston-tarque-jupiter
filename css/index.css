@@ -22,7 +22,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color:  rgb(2, 66, 2);
+    color: #2e332f;
     text-decoration: none;
     font-size: 18px;
 }
@@ -37,7 +37,7 @@ nav ul li a:hover {
     font-family: "Doto", cursive;
     font-size: 3.5rem;
     padding-top: 0.5rem;
-    background-color: green;
+    background-color: #464E47;
     text-align: center;
     border-radius: 40%;
 }
@@ -50,7 +50,7 @@ img{width: 30%}
 
 /*BODY*/
 body {
-    background-color: rgb(172,185,100);
+    background: #568259;);
     font-family: "Roboto", cursive;
 }
 
@@ -71,6 +71,7 @@ body {
     gap: 20px; /*space between grid parts */
     grid-template-columns: 1fr; /*column layout for header */
     grid-template-rows: auto 1fr; /* header and content rows*/
+    margin-bottom: 1rem; 
 }
 
 
@@ -124,7 +125,7 @@ body {
 #skills {
     text-align: center; 
     background-color: rgb(95,167, 80); 
-    padding: 0px; 
+    padding: 0.5px; 
     border-radius: 8px;
     color: black; 
     margin-bottom: 1rem; 
@@ -137,18 +138,10 @@ body {
     margin-bottom: 1rem; 
 }
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
+
 #skills ul {
     list-style-type: none;  /*no bullet points*/
     padding-left: 0;        /*no left padding*/
-=======
-#skills ul {
-    list-style-type: none;  /*no bullet points*/
-    padding-left: 0;        /*no left padding*/
-/***********/
->>>>>>> 8c24d61a9609926ea0e4e46eb794871e41d24ca5
     display: grid;          
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /*autofill columns*/
     gap: 10px;              
@@ -161,17 +154,9 @@ body {
     border-radius: 5px;          
     font-size: 1.1rem;           
     text-align: center;         
-<<<<<<< HEAD
+
 }
 
->>>>>>> Stashed changes
-=======
-}/**********************/
-
-
-
-
->>>>>>> 8c24d61a9609926ea0e4e46eb794871e41d24ca5
 /*PROJECTS SECTION*/
 #projects {
     text-align: center; 
@@ -232,10 +217,145 @@ body {
     object-fit: contain; /*this is a non-distortion measure*/
 }
 
+/*LEAVE MESSAGE FORM*/
+#leave-message label, #leave-message h2, #messages h2 {
+    text-decoration: underline;
+    text-decoration-color: black;
+    color: rgb(2, 66, 2); /* Green color */
+}
+#leave-message label, #messages label {
+    color: rgb(2, 66, 2); /* Green color for the labels */
+}
 
+#leave-message {
+    background-color: #96E6B3; 
+    padding: 20px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+    display: grid;
+    gap: 20px; /*gap between grid items*/
+    max-width: 600px;
+    margin-left: auto; /*centers*/
+    margin-right: auto; /*centers*/
+}
+
+/*Form input fields*/
+#leave-message input[type="text"], 
+#leave-message input[type="email"], 
+#leave-message textarea {
+    width: 100%;
+    padding: 12px; /*inside field*/
+    font-size: 1rem; 
+    border-radius: 5px;
+    border: 1px solid #4d654a;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+/*SUBMIT BUTTON*/
+#leave-message button[type="submit"] {
+    background-color: rgb(2, 66, 2);
+    color: white;
+    padding: 12px 15px;
+    font-size: 1.5rem;
+    border: none;  /*remove default border*/
+    border-radius: 5px;
+    cursor: pointer;  /*cursor change*/
+}
+
+/* Button hover effect */
+#leave-message button[type="submit"]:hover {
+    background-color: rgb(105, 113, 38);  /* Darker green on hover */
+}
+
+/*Remove button inside messages */
+button[type="button"] {
+    background-color: rgb(47, 0, 255);
+    color: white; 
+    font-size: 1rem; 
+    padding: 8px 16px;  
+    border-radius: 5px; 
+    cursor: pointer;
+    border: none;
+}
+
+/* Remove button hover effect */
+button[type="button"]:hover {
+    background-color: rgb(4, 1, 65); 
+}
+
+
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 /*&&&&&&&&&&&& MEDIA QUERIES &&&&&&&&&&&*/
 
-/*TABLETS*/
+/********/
+/*MOBILE*/
+@media (max-width: 480px) {
+    #leave-message {
+        padding: 10px; 
+        margin-left: 10px; 
+        margin-right: 10px;
+    }
+
+    /*increase input fields*/
+    #leave-message input[type="text"], 
+    #leave-message input[type="email"], 
+    #leave-message textarea {
+        font-size: 1.3rem;
+        padding: 15px; 
+    }
+
+    /*increase button size*/
+    #leave-message button[type="submit"] {
+        padding: 15px 25px;
+        font-size: 1.5rem;
+    }
+    
+    /*increase remove button size */
+    button[type="button"] {
+        padding: 13px 21px; 
+        font-size: 1.3rem;
+    }
+}
+
+/************************/
+/*TABLETS(480px - 768px)*/
+@media (min-width: 481px) and (max-width: 768px) {
+    #leave-message {
+        padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /*tablet input fields*/
+    #leave-message input[type="text"], 
+    #leave-message input[type="email"], 
+    #leave-message textarea {
+        font-size: 1.2rem;
+        padding: 13px;
+    }
+
+    /*tablet submit button*/
+    #leave-message button[type="submit"] {
+        padding: 12px 20px;
+        font-size: 1.3rem;
+    }
+
+    /*tablet remove button*/
+    button[type="button"] {
+        padding: 10px 18px;
+        font-size: 1.1rem;
+    }
+    #projects {
+        margin-bottom: 20px;  /*space below projects*/
+    }
+}
+
+
+
+/***********/
+/*DESKTOPS*/
 @media (min-width: 768px) {
    
 /*nav adjust*/
@@ -244,7 +364,7 @@ body {
         margin: 0 30px;
     }
     
-    /*anchor tags*/
+/*anchor tags*/
     nav ul li a{
         font-size: 20px;
     }
@@ -261,13 +381,14 @@ body {
 
 /*about section*/
     #about{
-        background-color: rgb(120, 180, 80);
-        padding: 10px;
+        background-color: #CCFCCB;
+        padding: 15px;
     }
 
 /*experience section*/
     #experience {
     margin-bottom: 30px;  
+    background-color: #CCFCCB;
     }
 
     #experience ul li {
@@ -278,12 +399,13 @@ body {
 
 /*skills, projects, connect sections*/
     #skills{
-        padding: 15px;
+        padding: 20px;
         color: black;
+        background-color: #CCFCCB;
     }
 
     #skills h2{
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
 
@@ -292,11 +414,13 @@ body {
     }
 
     #projects{
-        padding: 15px;  /*padding addition*/
+        padding: 20px;  /*padding addition*/
+        margin-bottom: 40px; 
+        background-color: #CCFCCB;
         }
     
     #connect{
-    padding: 15px;  /*padding addition*/
+    padding: 20px;  /*padding addition*/
     }
 
     #connect ul {
@@ -304,22 +428,52 @@ body {
     }
 
     #connect ul li{
-    width: 50px;   /*increase connect imgs*/
-    height: 50px;
+    width: 60px;   /*increase connect imgs*/
+    height: 60px;
     }
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+#leave-message {
+    padding: 20px;
 }
+
+/*adjust fields */
+#leave-message input[type="text"], 
+#leave-message input[type="email"], 
+#leave-message textarea {
+    font-size: 1rem;  
+    padding: 12px; 
+}
+
+/*Adjust submit button*/
+#leave-message button[type="submit"] {
+    padding: 12px 20px;  
+    font-size: 1.2rem;  
+}
+
+/* Adjust remove button for desktop */
+button[type="button"] {
+    padding: 8px 16px;  
+    font-size: 1rem;
+}
+}
+
+/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
+
+
 
 /*LARGER DEVICES*/
 @media (min-width: 1200px){
 
 /*nav adjust*/
     nav ul li{
-        margin: 0 40px;
+        margin: 0 50px;
     }
 
     /*anchor tags*/
     nav ul li a{
-        font-size: 23px;
+        font-size: 25px;
     }
 
     body{
@@ -329,22 +483,29 @@ body {
 
 /*name adjust*/
     #name-header{
-        font-size: 6rem;
+        font-size: 7rem;
     }
 
 /*portrait adjust*/
     .image-container img{
-        width: 15%;
+        width: 20%;
     }
+
+#about {
+    background-color: rgb(177, 207, 170);
+    padding: 30px;
+}
+
 
 /*experience section*/
     #experience {
-    margin-bottom: 30px;  
+    margin-bottom: 40px;  
+    background-color: rgb(177, 207, 170);
     }
     #experience ul li {
         display: grid;
         grid-template-columns: 1fr 1fr 2fr; 
-        gap: 15px;
+        gap: 20px;
         padding: 15px;
 
     }
@@ -355,7 +516,8 @@ body {
 
 /*skills, projects, connect sections*/
     #skills {
-        padding: 30px;  /*padding addition*/
+        background-color: rgb(177, 207, 170);
+        padding: 40px;  /*padding addition*/
         }
 
     #skills ul {
@@ -363,12 +525,13 @@ body {
      }
     
     #projects{
-        background-color: rgb(50, 74, 35);
-        padding: 30px;
+        background-color: rgb(177, 207, 170);
+        padding: 40px;
     }
 
     #connect {
-        padding: 30px;
+        background-color: rgb(177, 207, 170);
+        padding: 40px;
         flex-direction: row; /*column layout*/
     }
 
@@ -377,7 +540,7 @@ body {
     }
 
     #connect ul li{
-    width: 60px;   /*increase connect imgs*/
-    height: 60px;
+    width: 70px;   /*increase connect imgs*/
+    height: 70px;
     }
 }
