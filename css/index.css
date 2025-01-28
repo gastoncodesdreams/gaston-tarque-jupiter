@@ -1,6 +1,6 @@
 /*NAVIGATION BAR*/
 nav {
-    background-color:  rgb(95,167, 80);
+    background-color:  rgb(53, 94, 44);
     padding: 10px;
     position: sticky;
     top: 0;
@@ -22,7 +22,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #2e332f;
+    color: #d9ebdc;
     text-decoration: none;
     font-size: 18px;
 }
@@ -37,7 +37,7 @@ nav ul li a:hover {
     font-family: "Doto", cursive;
     font-size: 3.5rem;
     padding-top: 0.5rem;
-    background-color: #464E47;
+    background-color: rgb(134, 241, 149);
     text-align: center;
     border-radius: 40%;
 }
@@ -57,14 +57,14 @@ body {
 /*ABOUT SECTION*/
 #about{
     text-align: center;
-    background-color: rgb(95,167, 80);
+    background-color: rgb(134, 241, 149);
     padding: 5px; 
     border-radius: 8px;
     margin-bottom: 1rem;}
 
 /*EXPERIENCE SECTION*/
 #experience {
-    background-color: rgb(95,167, 80);
+    background-color: rgb(134, 241, 149);
     padding: 20px; 
     border-radius: 8px; 
     display: grid;
@@ -95,7 +95,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr; /*3 columns w 3 widths*/
     gap: 10px; /* Adds space between columns */
-    background-color: rgb(95,167, 80); /* background color */
+    background-color: rgb(207, 235, 202); /* background color */
     padding: 8px; /* padding */
     margin-bottom: 10px; /* space between each block */
     border-radius: 8px; /* round corners */
@@ -124,7 +124,7 @@ body {
 /*SKILLS SECTION*/
 #skills {
     text-align: center; 
-    background-color: rgb(95,167, 80); 
+    background-color: rgb(134, 241, 149);
     padding: 0.5px; 
     border-radius: 8px;
     color: black; 
@@ -149,7 +149,7 @@ body {
 }
 
 #skills ul li {
-    background-color: #57865f; 
+    background-color: rgb(187, 245, 181);
     padding: 10px;               
     border-radius: 5px;          
     font-size: 1.1rem;           
@@ -157,20 +157,54 @@ body {
 
 }
 
+
 /*PROJECTS SECTION*/
 #projects {
+    border-radius: 20%;
     text-align: center; 
-    background-color: rgb(95,167, 80);
+    background-color: rgb(134, 241, 149);
     padding: 0px; 
-    border-radius: 8px; 
+    padding-bottom: 20px;
     color: black; 
+
 }
+
+#projects ul {
+    list-style-type: none; /*no bullet*/
+    padding-left: 0;    /*no left padding*/
+    justify-content: center;
+    margin-top: 1rem;
+    background-color: rgb(134, 241, 149);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    max-width: 100vw;
+}
+
+#projects li {
+    margin: 0; /*remove any margin*/
+    background-color: rgb(187, 245, 181);
+    padding: 1rem;
+    border: 1px solid rgb(197, 245, 150);
+    border-radius: 1rem;
+}
+
+#projects li:hover{
+   -webkit-box-shadow: 0px 0px 10px 0px rgba(36, 36, 36, 0.313);
+   -moz-box-shadow: 21px 15px 46px -15px rgba(0,0,0,0.75);
+   cursor: pointer; 
+}   
 
 #projects h2 {
     font-family: "Roboto", cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold; /*header*/
     margin-bottom: 1rem; /*space between title and content*/
+}
+
+/*utility class*/
+.error{
+    color: red;
 }
 
 /*CONNECT SECTION*/
@@ -286,12 +320,14 @@ button[type="button"]:hover {
 
 
 
+/***&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&/
 /*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 /*&&&&&&&&&&&& MEDIA QUERIES &&&&&&&&&&&*/
 
-/********/
-/*MOBILE*/
-@media (max-width: 480px) {
+/********************************/
+/******MOBILE*******************/
+/********************************/
+@media (min-width: 300px) and (max-width: 480px) {
     #leave-message {
         padding: 10px; 
         margin-left: 10px; 
@@ -317,10 +353,18 @@ button[type="button"]:hover {
         padding: 13px 21px; 
         font-size: 1.3rem;
     }
+
+
+    #projects{
+        padding-bottom: 20px;
+    }
 }
 
-/************************/
-/*TABLETS(480px - 768px)*/
+
+/********************************/
+/******TABLETS*******************/
+/********************************/
+/*******************************/
 @media (min-width: 481px) and (max-width: 768px) {
     #leave-message {
         padding: 15px;
@@ -349,13 +393,14 @@ button[type="button"]:hover {
     }
     #projects {
         margin-bottom: 20px;  /*space below projects*/
+        background-color: rgb(134, 241, 149);
     }
 }
 
 
-
-/***********/
-/*DESKTOPS*/
+/********************************/
+/******DESKTOP*******************/
+/********************************/
 @media (min-width: 768px) {
    
 /*nav adjust*/
@@ -416,7 +461,8 @@ button[type="button"]:hover {
     #projects{
         padding: 20px;  /*padding addition*/
         margin-bottom: 40px; 
-        background-color: #CCFCCB;
+       /* background-color: #CCFCCB;*/
+       background-color: rgb(134, 241, 149);
         }
     
     #connect{
@@ -432,7 +478,7 @@ button[type="button"]:hover {
     height: 60px;
     }
 
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
+
 #leave-message {
     padding: 20px;
 }
@@ -458,12 +504,12 @@ button[type="button"] {
 }
 }
 
-/*&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&*/
 
 
 
-
-/*LARGER DEVICES*/
+/********************************/
+/******LARGER DEVICES************/
+/********************************/
 @media (min-width: 1200px){
 
 /*nav adjust*/
@@ -525,7 +571,7 @@ button[type="button"] {
      }
     
     #projects{
-        background-color: rgb(177, 207, 170);
+        background-color: rgb(134, 241, 149);
         padding: 40px;
     }
 
