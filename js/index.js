@@ -1,3 +1,13 @@
+//HAMBURGER LINK
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+    });
+});
+
 //FOOTER CREATED
 const aFooter = document.createElement('footer');
 aFooter.className = 'footer';
@@ -97,4 +107,53 @@ messageForm.addEventListener('submit', function(event){
 
     //clear form
     messageForm.reset();
+});
+////////////////////////////////LESSON 13//////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+//DOM Selectors (grab html elements)
+//DOM SELECTION for projectSection (parent) and for projectsList (child)
+const projectSection = document.getElementById("projects"); //document is global variable then gets html element by id
+//console.log("projectSection: ", projectSection);  //MUST CONSOLE LOG when interacting with html element to ensure match
+ const projectsList = projectSection.querySelector("ul");  //querySelector can select by (classname . ), (tagname "ul"), (id #)
+//console.log("projectsList: ", projectsList);  
+
+
+
+
+
+
+//FETCH (get projects from github API) /FETCH REQUEST, then method pass it a function that returns the response JSON data
+fetch("https://api.github.com/users/gastoncodesdreams/repos")
+.then((response) => {          //pass response parameter into .then callback fnc
+    return response.json();   //convert from json
+})
+.then((repositories) => {    //data is now a javascript object 
+   
+    // LOOP thru repos array and parse project data 
+    for (let i= 0; i < repositories.length; i++){
+        const project = repositories[i].name;          //GRAB project data, name is a string [index array to get specific object]
+        const li = document.createElement("li");       //CREATE DOM (html) elements
+        li.innerText = project;                       // INSERT project data into DOM elmnt i.e <li> gastoncodesdreams </li>
+        projectsList.appendChild(li);                 // ADD DOM elmnts to page
+
+    }
+   // console.log("repositories: ", repositories);
+}).catch((error) => {
+    const errorMessage = document.createElement("p");  //CREATE error message, add paragraph tab
+    errorMessage.innerText = error.message;            //SET innertext to error.message
+    errorMessage.classList.add("error");               //ADD class called error
+    projectSection.appendChild(errorMessage);
+});
+
+
+
+///////////////////// AOS 2/4 SCROLL CHANGES
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 1000, //duration in milliseconds
+        once: true, //only runs once when scrolling down
+        easing: "ease-in-out", //smoothness
+        delay: 300, // Adds a slight delay before animation starts
+    });
 });

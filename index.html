@@ -9,13 +9,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    
+
+
+   <!-- AOS CSS ---------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- AOS JavaScript ------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <title>Gaston's Portfolio</title>
 </head>
 <body>
 
     <nav>
-        <ul>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class = "nav-links">
             <li><a href="#name-header">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -37,8 +49,9 @@
 
         <p>Winthrop Alumni, Code the Dream student, baker of cakes, and runner of many miles, Gaston loves to spend his spare time learning about circuits, life saving technologies, and mathematics.  </p>
     </section>
-  
-    <section id="experience"> 
+  <!-------------------------added data-aos-------------------------->
+    <section id="experience" data-aos = "fade-in"> 
+        <!--------------------------------------------------->
         <h2>Experience</h2>
         <ul> 
             <li>
@@ -78,6 +91,7 @@
 
     <section id="projects">
         <h2>Projects</h2>
+        <ul></ul>
     </section>
 
 
@@ -129,5 +143,10 @@
 
 <footer></footer>
 <script src="js/index.js"></script>
+<!----------->
+<script>
+    AOS.init();
+  </script>
+  <!----------->
 </body>
 </html>
