@@ -1,3 +1,13 @@
+//HAMBURGER LINK
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+    });
+});
+
 //FOOTER CREATED
 const aFooter = document.createElement('footer');
 aFooter.className = 'footer';
@@ -134,4 +144,16 @@ fetch("https://api.github.com/users/gastoncodesdreams/repos")
     errorMessage.innerText = error.message;            //SET innertext to error.message
     errorMessage.classList.add("error");               //ADD class called error
     projectSection.appendChild(errorMessage);
+});
+
+
+
+///////////////////// AOS 2/4 SCROLL CHANGES
+document.addEventListener("DOMContentLoaded", function () {
+    AOS.init({
+        duration: 1000, //duration in milliseconds
+        once: true, //only runs once when scrolling down
+        easing: "ease-in-out", //smoothness
+        delay: 300, // Adds a slight delay before animation starts
+    });
 });
