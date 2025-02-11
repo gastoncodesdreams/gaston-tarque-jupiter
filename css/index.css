@@ -39,10 +39,10 @@ nav ul li a:hover {
 }
 /*NAME HEADER*/
 #name-header {
-    font-family: "Doto", cursive;
+    background-color: #CCFCCB;
+    font-family: "Doto", Tahoma;
     font-size: 3.5rem;
     padding-top: 0.5rem;
-    background-color: #CCFCCB;
     text-align: center;
     border-radius: 40%;
 }
@@ -67,7 +67,7 @@ img{
 /*BODY*/
 body {
     background:  #CCFCCB;
-    font-family: "Roboto", cursive;
+    font-family: "Roboto","Segoe UI", Tahoma, sans-serif;
 }
 
 /*ABOUT SECTION*/
@@ -84,15 +84,15 @@ body {
     padding: 20px; 
     border-radius: 8px; 
     display: grid;
-    gap: 20px; /*space between grid parts */
-    grid-template-columns: 1fr; /*column layout for header */
+    gap: 20px; /*space between grid parts*/
+    grid-template-columns: 1fr; /*column layout for header*/
     grid-template-rows: auto 1fr; /* header and content rows*/
     margin-bottom: 1rem; 
 }
 
 
 #experience h2 {
-    font-family: "Roboto", cursive;
+    font-family: "Roboto", Tahoma;
     font-size: 2rem;
     color: black;
     text-align: center;
@@ -108,16 +108,16 @@ body {
 
 /*For each block under ul and li*/
 #experience ul li {
+    background-color: rgb(207, 235, 202); 
+    color: black; 
     display: grid;
     grid-template-columns: 1fr 1fr 2fr; /*3 columns w 3 widths*/
-    gap: 10px; /* Adds space between columns */
-    background-color: rgb(207, 235, 202); /* background color */
-    padding: 8px; /* padding */
-    margin-bottom: 10px; /* space between each block */
-    border-radius: 8px; /* round corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /* shadow */
+    gap: 10px; /*space between columns*/
+    padding: 8px; /*padding*/
+    margin-bottom: 10px; /*space between each block*/
+    border-radius: 8px; /*rounded*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); /*shadow*/
     font-size: 1rem; 
-    color: black; 
 }
 /*JOB TITLE*/
 #experience ul li .job-title {
@@ -139,8 +139,8 @@ body {
 
 /*SKILLS SECTION*/
 #skills {
-    text-align: center; 
     background-color: #CCFCCB;
+    text-align: center; 
     padding: 0.5px; 
     border-radius: 8px;
     color: black; 
@@ -148,7 +148,7 @@ body {
 }
 
 #skills h2 {
-    font-family: "Roboto", cursive;
+    font-family: "Roboto", Tahoma;
     font-size: 2rem;
     font-weight: bold; 
     margin-bottom: 1rem; 
@@ -156,8 +156,8 @@ body {
 
 
 #skills ul {
-    list-style-type: none;  /*no bullet points*/
-    padding-left: 0;        /*no left padding*/
+    list-style-type: none; /*no bullet points*/
+    padding-left: 0;/*no left padding*/
     display: grid;          
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /*autofill columns*/
     gap: 10px;              
@@ -176,13 +176,12 @@ body {
 
 /*PROJECTS SECTION*/
 #projects {
+    background-color: rgb(134, 241, 149);
+    color: black; 
     border-radius: 20%;
     text-align: center; 
-    background-color: rgb(134, 241, 149);
     padding: 0px; 
     padding-bottom: 20px;
-    color: black; 
-
 }
 
 #projects ul {
@@ -225,11 +224,11 @@ body {
 
 /*CONNECT SECTION*/
 #connect {
-    text-align: center;
     background-color:  #CCFCCB; 
+    color: #134413;
+    text-align: center;
     padding: 20px; 
     border-radius: 100px; 
-    color: #134413;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,10 +270,10 @@ body {
 #leave-message label, #leave-message h2, #messages h2 {
     text-decoration: none;
     text-decoration-color: black;
-    color: rgb(2, 66, 2); /* Green color */
+    color: rgb(2, 66, 2);
 }
 #leave-message label, #messages label {
-    color: rgb(2, 66, 2); /* Green color for the labels */
+    color: rgb(2, 66, 2);
 }
 
 #leave-message {
@@ -283,7 +282,7 @@ body {
     border-radius: 100px;
     margin-bottom: 1rem;
     display: grid;
-    gap: 20px; /*gap between grid items*/
+    gap: 20px; /*gap between grid elements*/
     max-width: 600px;
     margin-left: auto; /*centers*/
     margin-right: auto; /*centers*/ 
@@ -294,7 +293,7 @@ body {
 #leave-message input[type="email"], 
 #leave-message textarea {
     width: 100%;
-    padding: 12px; /*inside field*/
+    padding: 12px;
     font-size: 1rem; 
     border-radius: 5px;
     border: 1px solid #4d654a;
@@ -313,14 +312,14 @@ body {
     cursor: pointer;  /*cursor change*/
 }
 
-/* Button hover effect */
+/*BUTTON HOVER*/
 #leave-message button[type="submit"]:hover {
-    background-color: rgb(105, 113, 38);  /* Darker green on hover */
+    background-color: rgb(105, 113, 38); 
 }
 
-/*Remove button inside messages */
+/*REMOVE button inside messages*/
 button[type="button"] {
-    background-color: rgb(47, 0, 255);
+    background-color:rgb(2, 66, 2);
     color: white; 
     font-size: 1rem; 
     padding: 8px 16px;  
@@ -331,12 +330,78 @@ button[type="button"] {
 
 /*Remove button hover effect*/
 button[type="button"]:hover {
-    background-color: rgb(4, 1, 65); 
+    background-color:rgb(105, 113, 38); 
 }
 
-/*No messages display*/
-#messages {
-    display: none;
+
+/***********MESSAGE DISPLAY******************/
+#messages {  
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    background-color: #f8f8f8;
+    margin: 20px auto;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /*non stretch measure*/
+    overflow: auto; /*hidden to auto OVERFLOWMEASURE?*/
+}
+
+/*INDIVIDUAL messages */
+.message-container { 
+    background-color: #ffffff; 
+    border: 1px solid #4d654a; 
+    padding: 20px;
+    margin-bottom: 15px; 
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /*stacks elmts*/
+    align-items: center; /*ADDITION*/
+    max-width: 100%; /*Prevents overflow*/
+    box-sizing: border-box; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+/*TEXT message styling*/
+.message-container p {
+    color: #333;
+    margin: 10px 0;
+    font-size: 1rem;
+    max-width: 100%; 
+    white-space: normal; /*wrapping measure?*/
+}
+
+/*NAME styling*/
+.message-container .message-name {
+    color: rgb(2, 66, 2);
+    font-weight: bold;
+    font-size: 1.2rem;
+    max-width: 100%; /*non overflow measure*/
+}
+
+/*EMAIL styling*/
+.message-container .message-email {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #555;
+    max-width: 100%; /*non overflow*/
+}
+/*REMOVE button*/
+.message-container button {
+    display: none; /*hide by default*/
+    align-self: center;
+    max-width: fit-content;
+    margin-top: 10px;
+    padding: 10px 20px; 
+    box-sizing: border-box; 
+}
+
+
+.message-container:hover button {
+    display: block; /*visible when hovering*/
 }
 
 
@@ -366,9 +431,9 @@ button[type="button"]:hover {
 /*&&&&&&&&&&&& MEDIA QUERIES &&&&&&&&&&&*/
 
 /********************************/
-/******MOBILE*******************/
+/******MOBILE********was minimum 300***********/
 /********************************/
-@media (min-width: 300px) and (max-width: 480px) {
+@media (min-width: 100px) and (max-width: 480px) {
    
    
     .hamburger-menu {
@@ -376,9 +441,9 @@ button[type="button"]:hover {
     }
 
     nav ul {
+        background-color: rgb(53, 94, 44);
         display: none;
         flex-direction: column;
-        background-color: rgb(53, 94, 44);
         position: absolute;
         top: 50px;
         right: 0;
@@ -396,18 +461,21 @@ button[type="button"]:hover {
         padding: 15px;
     }
   
+    #projects{
+        padding-bottom: 20px;
+    }
+
     #leave-message {
+    background-color:#96E6B3;    
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color:#96E6B3;
     padding: 15px;
     border-radius: 10px;
-    width: fit-content; /*Ensures to only takes necessary space*/
-    margin: auto; /*Centers*/
+    width: fit-content; /*only takes necessary space*/
+    margin: auto; /*centers*/
     }
-
 
     /*increase input fields*/
     #leave-message input[type="text"], 
@@ -423,15 +491,28 @@ button[type="button"]:hover {
         font-size: 1.5rem;
     }
     
-    /*increase remove button size */
+    /*increase remove button size*/
     button[type="button"] {
         padding: 13px 21px; 
         font-size: 1.3rem;
     }
 
+    #messages {
+        width: 95%; 
+        padding: 15px;
+    }
 
-    #projects{
-        padding-bottom: 20px;
+    .message-container {
+        padding: 10px;
+        text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word; 
+    }
+
+    .message-container p {
+        font-size: 0.9rem;
+        white-space: normal; 
+        max-width: 100%;
     }
 }
 
@@ -467,16 +548,30 @@ button[type="button"]:hover {
         font-size: 1.1rem;
     }
     #projects {
-        margin-bottom: 20px;  /*space below projects*/
+        margin-bottom: 20px;  /*below projects*/
         background-color: rgb(134, 241, 149);
     }
+
+  
+    .message-container {
+        max-width: 100%; /*no container stretch*/
+        text-align: center; /*center text*/
+        word-wrap: break-word; /*long word break/wrap*/
+        overflow-wrap: break-word; /*long word break wrap*/
+    }
+
+    .message-container p {
+        white-space: normal; /*ensure text wraps*/
+        max-width: 100%; /*overflow*/
+    }*
+
 }
 
 
 /********************************/
 /******DESKTOP*******************/
 /********************************/
-@media (min-width: 768px) {
+@media (min-width: 769px) and (max-width: 1199px) {
    
 /*nav adjust*/
     nav ul li{
@@ -536,8 +631,8 @@ button[type="button"]:hover {
     #projects{
         padding: 20px;  /*padding addition*/
         margin-bottom: 40px; 
-       /* background-color: #CCFCCB;*/
-       background-color: rgb(134, 241, 149);
+      /* background-color: #CCFCCB;*/
+      background-color: rgb(134, 241, 149); 
         }
     
     #connect{
@@ -549,7 +644,7 @@ button[type="button"]:hover {
     }
 
     #connect ul li{
-    width: 60px;   /*increase connect imgs*/
+    width: 60px; /*increase connect imgs*/
     height: 60px;
     }
 
@@ -558,7 +653,7 @@ button[type="button"]:hover {
     padding: 20px;
 }
 
-/*adjust fields */
+/*adjust fields*/
 #leave-message input[type="text"], 
 #leave-message input[type="email"], 
 #leave-message textarea {
@@ -566,26 +661,49 @@ button[type="button"]:hover {
     padding: 12px; 
 }
 
-/*Adjust submit button*/
+/*adjust submit button*/
 #leave-message button[type="submit"] {
     padding: 12px 20px;  
     font-size: 1.2rem;  
 }
 
-/* Adjust remove button for desktop */
+/*adjust remove button for desktop*/
 button[type="button"] {
     padding: 8px 16px;  
     font-size: 1rem;
 }
 }
 
+ .message-container {
+        max-width: 100%; /*no container stretch*/
+        text-align: center; /*center text*/
+        word-wrap: break-word; /*long word break/wrap*/
+        overflow-wrap: break-word; /*long word break wrap*/
 
 
+    /*ADDITION*/
+        align-items: flex-start;
+        max-width: 95%;
+    /*ADDITION*/
+
+
+    }
+
+     /*ADDITION*/
+    .message-container button{
+        display: block;
+    }
+     /*ADDITION*/
+
+    .message-container p {
+        white-space: normal; /*ensure text wraps*/
+        max-width: 100%; /*overflow*/
+    }
 
 /********************************/
 /******LARGER DEVICES************/
 /********************************/
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 
 /*nav adjust*/
     nav ul li{
@@ -617,7 +735,6 @@ button[type="button"] {
     padding: 30px;
 }
 
-
 /*experience section*/
     #experience {
     margin-bottom: 40px;  
@@ -630,7 +747,6 @@ button[type="button"] {
         padding: 15px;
 
     }
-
     #experience ul li .job-description{
         margin-left: 20px; /*additional margin*/
     }
@@ -664,4 +780,32 @@ button[type="button"] {
     width: 70px;   /*increase connect imgs*/
     height: 70px;
     }
+
+    #messages{
+        max-width: 1280px;
+        padding: 20px;
+    }
+
+    .message-container{
+        max-width: 100%; /*no container stretch*/
+        text-align: center; /*center text*/
+        word-wrap: break-word; /*long word break/wrap*/
+        overflow-wrap: break-word; /*long word break wrap*/
+        padding: 20px;
+    }
+
+    .message-container p{
+        white-space: normal; /*ensure text wraps*/
+        max-width: 100%; /*overflow*/
+        margin: 10px 0; 
+    }
+
+
+    .message-container button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
 }
